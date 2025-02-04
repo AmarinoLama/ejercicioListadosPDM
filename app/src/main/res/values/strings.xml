@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Listados</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button">Button</string>
+    <string name="activity_2">Activity 2</string>
+    <string name="textview">TextView</string>
+    <string name="open_activity_2">Open Activity 2</string>
+    <string name="volver">volver</string>
+    <string name="hola_paco">hola paco</string>
+    <string name="todo">TODO</string>
+</resources>
