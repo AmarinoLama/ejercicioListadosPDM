@@ -12,6 +12,7 @@ public class Activity2 extends AppCompatActivity {
     private Button button;
     private ImageView ivImagen;
     private TextView tvNombre;
+    private Animal animal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +23,16 @@ public class Activity2 extends AppCompatActivity {
         ivImagen = findViewById(R.id.ivImagen);
         tvNombre = findViewById(R.id.tvNombre);
 
-        Intent intent = getIntent();
-        Animal animal = (Animal) intent.getSerializableExtra("animal");
+        animal = (Animal) getIntent().getSerializableExtra("animal");
 
         tvNombre.setText(animal.getNombre());
         ivImagen.setImageResource(animal.getImagen());
 
         button.setOnClickListener(v -> {
-            Intent intentAct1 = new Intent(this, MainActivity.class);
-            startActivity(intentAct1);
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("animalVerificado", animal.getNombre());
+            setResult(RESULT_OK, resultIntent);
+            finish();
         });
     }
 }
